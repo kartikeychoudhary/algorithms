@@ -1,0 +1,12 @@
+def sort(self):
+        # Traverse through all array elements
+        for i in range(self.length):
+            swapped = False
+            # Last i elements are already in place
+            for j in range(self.length-i-1):
+                if self.array[i] > self.array[j]:
+                    self.array[i], self.array[j] = self.array[j], self.array[i]
+                    swapped = True
+            
+            if not swapped:
+                break
