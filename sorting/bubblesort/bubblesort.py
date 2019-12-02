@@ -16,6 +16,13 @@ class BubbleSort:
         print("Best Case Time Complexity : O(n)")
         print("Auxiliary Space : O(1)")
 
+    def help(self):
+        msg = "BubbleSort Algorithm \n\n " \
+          "Use sort() : To sort the list (Array) \n " \
+          "Use sortSteps() : To get list of all steps to sort using bubblesort (in Json Form) \n "
+        print(msg)
+        self.info()
+
     def program(self):
         with open("program.txt", "r") as file:
             lines = file.readlines()
