@@ -47,19 +47,18 @@ class InsertionSort():
         for i in range(1, self.length):
             key = self.array[i]
             j = i-1
-            result.append({"array":self.array, "key_index":i})
             flag=False
             while j >= 0 and key < self.array[j] : 
                     self.array[j + 1] = self.array[j]
                     j -= 1
                     flag=True
             self.array[j + 1] = key
-            print(i, self.array, j,sep=" || ")
+            result.append({"array":self.array, "key_index":i, "swap_index":j})
 
 
         return self.array
 
-arr = [12,42,12,32,54,23,12,43,65]
-obj = InsertionSort(arr)
-obj.sortSteps()
+# arr = [12,42,12,32,54,23,12,43,65]
+# obj = InsertionSort(arr)
+# obj.sortSteps()
 
