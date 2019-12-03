@@ -1,0 +1,10 @@
+def sort(self):
+        for i in range(1, self.length): 
+                key = self.array[i] 
+                j = i-1
+                while j >= 0 and key < self.array[j] : 
+                        self.array[j + 1] = self.array[j] 
+                        j -= 1
+                self.array[j + 1] = key 
+
+        return self.array
