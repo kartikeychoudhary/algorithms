@@ -44,6 +44,7 @@ class InsertionSort():
     def sortSteps(self):
         self.resetArray()
         result = []
+        #print(self.array)
         for i in range(1, self.length):
             key = self.array[i]
             j = i-1
@@ -53,12 +54,12 @@ class InsertionSort():
                     j -= 1
                     flag=True
             self.array[j + 1] = key
-            result.append({"array":self.array, "key_index":i, "swap_index":j})
+            result.append({"array":self.array[:], "key_index":i, "sort_index":j+1, "swap":flag})
 
 
-        return self.array
+        return json.dumps(result)
 
-# arr = [12,42,12,32,54,23,12,43,65]
-# obj = InsertionSort(arr)
-# obj.sortSteps()
+arr = [9,8,7,6,5,4,3,2,1]
+obj = InsertionSort(arr)
+print(obj.sortSteps())
 

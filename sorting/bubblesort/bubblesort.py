@@ -54,9 +54,9 @@ class BubbleSort:
                 if self.array[j] > self.array[j+1]:
                     self.array[j], self.array[j+1] = self.array[j+1], self.array[j]
                     swapped = True
-                    steps.append({"array":self.array, "index":[j, j+1],"swap":True})
+                    steps.append({"array":self.array[:], "index":[j, j+1],"swap":True})
                 else:
-                    steps.append({"array":self.array,"index":[j, j+1],"swap":False})
+                    steps.append({"array":self.array[:],"index":[j, j+1],"swap":False})
             if not swapped:
                 break
         return json.dumps(steps)
